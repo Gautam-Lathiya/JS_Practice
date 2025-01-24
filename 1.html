@@ -1,0 +1,80 @@
+<!-- Using document.write() after an HTML document is loaded, will delete all existing HTML: -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document.write() Example</title>
+</head>
+<body>
+    <h1>Original Content</h1>
+    <p>This is the original content on the page.</p>
+
+    <p id="newContent"></p>
+
+    <script>
+        // Wait for 3 seconds after the page loads, then use document.write()
+        window.onload = function() {
+            setTimeout(function() {
+                document.write("Simform solutions");
+                // document.getElementById('newContent').innerHTML = "<h2>New Content!</h2><p>This content is added without replacing everything.</p>";
+            }, 3000);
+        };
+    </script>
+</body>
+</html>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+
+
+<!-- second example -->
+<!-- 
+<h1>hello</h1>
+<button type="button" onclick="document.write(5 + 6)">Try it</button> -->
+<!-- put above two lines in body tag, "hello" will be disappeared after clicking on the button -->
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+
+<!-- third example -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h1>hello world</h1>
+<p id="demo"></p>
+
+<script>
+    function toCelsius(f) {
+        document.write(f + " gautam");
+        return (5/9) * (f-32);
+    }
+   
+    window.onload = function() {
+        setTimeout(function() {
+            document.write("how are you?");
+            // document.getElementById('newContent').innerHTML = "<h2>New Content!</h2><p>This content is added without replacing everything.</p>";
+        }, 3000);
+    };
+    let value = toCelsius(5);
+    document.getElementById("demo").innerHTML = value;
+</script>
+
+</body>
+</html> -->
+
+
+<!-- 
+    
+Output:
+
+hello world
+-15
+5 gautam
+
+---page reload
+how are you?
+
+
+-->
