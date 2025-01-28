@@ -1,7 +1,31 @@
 <!DOCTYPE html>
 <html>
 <body>
+    <p id="demo"></p>
     <script src="index.js"></script>
 
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <script>
+        const myFun = function(str){
+            console.log(str + Date.now());
+        }
+        var ref;
+        document.querySelector('#start').addEventListener('click', function(){
+            if(!ref){
+                ref = setInterval(myFun, 1000, "Gautam");
+                console.log("started");
+            }
+        })
+    
+        document.querySelector('#stop').addEventListener('click', function(){
+            if(ref){
+                clearInterval(ref);
+                ref = null;
+                console.log("Stopped");
+            }
+        })
+    </script>
 </body>
+
 </html>
